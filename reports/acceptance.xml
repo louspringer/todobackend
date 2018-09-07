@@ -1,0 +1,18 @@
+<testsuites name="Mocha Tests">
+  <testsuite name="Cross Origin Requests" tests="2" errors="0" failures="0" skipped="0" timestamp="2018-09-06T21:17:38" time="0.141">
+    <testcase classname="Cross Origin Requests" name="should return the correct CORS headers" time="0.135">
+    </testcase>
+    <testcase classname="Cross Origin Requests" name="should allow all origins" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Create todo item" tests="4" errors="0" failures="0" skipped="0" timestamp="2018-09-06T21:17:38" time="0.053">
+    <testcase classname="Create todo item" name="should return a 201 CREATED response" time="0.027">
+    </testcase>
+    <testcase classname="Create todo item" name="should receive a location hyperlink" time="0.001">
+    </testcase>
+    <testcase classname="Create todo item" name="should create the item" time="0.01">
+    </testcase>
+    <testcase classname="Create todo item" name="what we get shuold be what we created" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -15,7 +15,7 @@ services:
       DJANGO_SETTINGS_MODULE: todobackend.settings.release
       MYSQL_HOST: db
       MYSQL_USER: todo
-      MYSQL_PASSWORD: password
+      MYSQL_PASSWORD: Kk0@71tzXc5%
     volumes:
       - webroot:/var/www/todobackend
     command:
@@ -27,11 +27,12 @@ services:
       - "--die-on-term"
 
   test:
-    image: jmenga/todobackend-specs
+    image: louspringer/todobackend-specs
     links:
       - nginx
     environment:
-      URL: http://nginx:8000/todos
+      # URL: http://nginx:8000/todos
+      HOST: http://nginx:8000
       JUNIT_REPORT_PATH: /reports/acceptance.xml
       JUNIT_REPORT_STACK: 1
     command: --reporter mocha-jenkins-reporter
@@ -54,11 +55,11 @@ services:
     environment:
       MYSQL_DATABASE: todobackend
       MYSQL_USER: todo
-      MYSQL_PASSWORD: password
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_PASSWORD: Kk0@71tzXc5%
+      MYSQL_ROOT_PASSWORD: Kk0@71tzXc5%
 
   agent:
-    image: jmenga/ansible
+    image: louspringer/ansible
     links:
       - db
     environment:
